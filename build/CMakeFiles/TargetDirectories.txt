@@ -1,6 +1,0 @@
-/home/Archie/cryphon/mlib/build/CMakeFiles/mathslib.dir
-/home/Archie/cryphon/mlib/build/CMakeFiles/edit_cache.dir
-/home/Archie/cryphon/mlib/build/CMakeFiles/rebuild_cache.dir
-/home/Archie/cryphon/mlib/build/lib/CMakeFiles/arithmetic.dir
-/home/Archie/cryphon/mlib/build/lib/CMakeFiles/edit_cache.dir
-/home/Archie/cryphon/mlib/build/lib/CMakeFiles/rebuild_cache.dir

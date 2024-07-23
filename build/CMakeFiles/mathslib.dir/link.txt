@@ -1,1 +1,0 @@
-/sbin/c++ CMakeFiles/mathslib.dir/main.cpp.o -o mathslib  -Wl,-rpath,/home/Archie/cryphon/mlib/build/lib lib/libarithmetic.so
