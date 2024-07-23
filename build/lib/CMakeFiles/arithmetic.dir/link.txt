@@ -1,1 +1,0 @@
-/sbin/c++ -fPIC -shared -Wl,-soname,libarithmetic.so -o libarithmetic.so CMakeFiles/arithmetic.dir/arithmetic.cpp.o

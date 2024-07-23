@@ -1,1 +1,0 @@
-/sbin/c++ -fPIC -shared -Wl,-soname,libmlib.so -o libmlib.so CMakeFiles/mlib.dir/mlib.cpp.o
