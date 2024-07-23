@@ -19,3 +19,10 @@ double divide(int a, int b) {
     }
     return static_cast<double>(a) / b;
 }
+
+int modulo(int a, int b) {
+    if(b == 0) {
+        throw std::invalid_argument("[error]: modulo by zero");
+    }
+    return a % b;
+}

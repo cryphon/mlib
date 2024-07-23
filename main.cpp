@@ -8,5 +8,6 @@ int main(void) {
     std::cout << sub(a, b) << "\n";
     std::cout << multiply(a, b) << "\n";
     std::cout << divide(a, b) << "\n";
+    std::cout << modulo(a, 3) << "\n";
     return 0;
 }
