@@ -8,6 +8,6 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 add_executable(${PROJECT_NAME} main.cpp)
 
 target_link_libraries(${PROJECT_NAME} arithmetic)
-
+target_link_libraries(${PROJECT_NAME} algebra)
 add_subdirectory(lib)
 
