@@ -19,3 +19,11 @@ add_library(mlib STATIC
 add_executable(${PROJECT_NAME} main.cpp)
 target_link_libraries(${PROJECT_NAME} mlib)
 
+
+# Custom target to build and run
+add_custom_target(run
+    COMMAND ${PROJECT_NAME}
+    DEPENDS ${PROJECT_NAME}
+    WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}
+    COMMENT "Building and running test_mlib"
+)
