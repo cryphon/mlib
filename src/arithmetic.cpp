@@ -1,5 +1,4 @@
-#include "arithmetic.hpp"
-
+#include <mlib/arithmetic.hpp>
 
 int add(int a, int b) {
     return a + b;
@@ -26,3 +25,4 @@ int modulo(int a, int b) {
     }
     return a % b;
 }
+

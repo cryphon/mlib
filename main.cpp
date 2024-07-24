@@ -1,6 +1,6 @@
 #include <iostream>
-#include "arithmetic.hpp"
-#include "algebra.hpp"
+#include <mlib/algebra.hpp>
+#include <mlib/arithmetic.hpp>
 
 int main(void) {
     int a = 10, b = 20;
