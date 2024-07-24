@@ -7,10 +7,15 @@ int factorial(int n) {
     return f;
 }
 
+// Exponation by squaring
 double power(double base, int exp) {
-    double res = 1;
-    for(size_t i = 0; i <  exp; i++) {
-       res = res * base;
-   }
-    return res;
+    if(exp == 0) return 1;
+    if(exp == 1) return base;
+
+    double half = power(base, exp /2);
+
+    if(exp % 2 == 0) {
+        return half * half;
+    }
+    return half * half * base;
 }
