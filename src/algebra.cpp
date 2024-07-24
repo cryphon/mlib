@@ -8,5 +8,9 @@ int factorial(int n) {
 }
 
 double power(double base, int exp) {
-    
+    double res = 1;
+    for(size_t i = 0; i <  exp; i++) {
+       res = res * base;
+   }
+    return res;
 }
