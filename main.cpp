@@ -15,5 +15,7 @@ int main(void) {
     // algebra
     std::cout << "[factorial]: " << m_factorial(4) << "\n";
     std::cout << "[power]: " << m_power(4, 4) << "\n";
+    std::cout << "[sqrt]: " << m_sqrt(b) << "\n";
+    std::cout << "[abs]: " << m_abs(-b) << "\n"; 
     return 0;
 }
