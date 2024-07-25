@@ -22,14 +22,14 @@ double m_power(double base, int exp) {
 
 // Newton-Raphson method
 double m_sqrt(double n) {
-    if(n < 0) return std::nan("");
-    if(n == 0) return 0;
+    if (n < 0) return std::nan("");
+    if (n == 0) return 0;
 
     double y = n;
-    double eps = 1e10; // desired precision
-    while(true){
+    double epsilon = 1e-10;  // Desired precision
+    while (true) {
         double y_next = 0.5 * (y + n / y);
-        if(abs(y - y_next) < eps) break;
+        if (std::abs(y - y_next) < epsilon) break;
         y = y_next;
     }
     return y;
