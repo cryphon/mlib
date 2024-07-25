@@ -13,7 +13,7 @@ int main(void) {
     std::cout << "[modulo]: " << modulo(a, 3) << "\n";
 
     // algebra
-    std::cout << "[factorial]: " << factorial(4) << "\n";
-    std::cout << "[power]: " << power(4, 4) << "\n";
+    std::cout << "[factorial]: " << m_factorial(4) << "\n";
+    std::cout << "[power]: " << m_power(4, 4) << "\n";
     return 0;
 }
