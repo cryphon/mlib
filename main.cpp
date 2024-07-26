@@ -17,5 +17,6 @@ int main(void) {
     std::cout << "[power]: " << m_power(4, 4) << "\n";
     std::cout << "[sqrt]: " << m_sqrt(b) << "\n";
     std::cout << "[abs]: " << m_abs(-b) << "\n"; 
+    std::cout << "[log]: " << m_log(b) << "\n";
     return 0;
 }
