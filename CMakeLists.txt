@@ -15,9 +15,12 @@ add_library(mlib STATIC
     src/algebra.cpp
 )
 
+add_library(testing STATIC
+    src/test_util.cpp
+)
 
 add_executable(${PROJECT_NAME} main.cpp)
-target_link_libraries(${PROJECT_NAME} mlib)
+target_link_libraries(${PROJECT_NAME} mlib testing)
 
 
 # Custom target to build and run
