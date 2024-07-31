@@ -76,7 +76,33 @@ double m_abs(double n) {
 }
 
 double m_log(double n) {
-    return custom_log(n, 1);
+    if (n < 0) {
+        return std::numeric_limits<double>::quiet_NaN(); // NaN for negative input
+    }
+    if (n == 0) {
+        return -std::numeric_limits<double>::infinity(); // -inf for 0
+    }
+    if (n == 1) {
+        return 0; // log(1) = 0
+    }
+
+    // Extract mantissa (m) and exponent (e) such that x = m * 2^e
+    int e;
+    double m = std::frexp(n, &e);
+
+    // Use polynomial approximation on the mantissa
+    double y = m - 1;
+    double y2 = y * y;
+    double y3 = y2 * y;
+    double y4 = y3 * y;
+
+    // Polynomial approximation (truncated Taylor series)
+    double result = y - y2 / 2 + y3 / 3 - y4 / 4;
+
+    // Add the contribution from the exponent
+    result += e * std::log(2.0);
+
+    return result;
 }
 
 double m_log(double n, int e) {
