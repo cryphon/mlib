@@ -5,8 +5,7 @@ int m_factorial(int n);
 double m_power(double base, int exp);
 double m_sqrt(double n);
 double m_log(double n); // natural log
-double m_log10(double n);
-double m_log2(double n);
+double m_log(double n, int e);
 double m_exp(double n);
 double m_abs(double n);
 int m_gcd(int a, int b);

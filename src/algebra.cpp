@@ -35,13 +35,7 @@ double m_sqrt(double n) {
     return y;
 }
 
-double m_abs(double n) {
-    if(n < 0) return -n;
-    return n;
-}
-
-// simple implementation for log
-double m_log(double n) {
+double custom_log(double n, double base) {
     if (n < 0) {
         return std::numeric_limits<double>::quiet_NaN(); // NaN for negative input
     }
@@ -65,9 +59,27 @@ double m_log(double n) {
     // Polynomial approximation (truncated Taylor series)
     double result = y - y2 / 2 + y3 / 3 - y4 / 4;
 
-    // Add the contribution from the exponent
+    // Add the contribution from the exponent and adjust for the base
     result += e * std::log(2.0);
 
+    // Adjust for the base
+    result /= std::log(base);
+
     return result;
+}
+
+
+
+double m_abs(double n) {
+  if(n < 0) return -n;
+    return n; 
+}
+
+double m_log(double n) {
+    return custom_log(n, 1);
+}
+
+double m_log(double n, int e) {
+    return custom_log(n, e);
 }
 
