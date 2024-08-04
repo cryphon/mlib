@@ -11,6 +11,7 @@ int main(void) {
     std::cout << "[abs]: " << m_abs(-b) << std::endl; 
     std::cout << "[log1]: " << m_log(b) << std::endl;
     std::cout << "[log2]: " << m_log(b, 2) << std::endl;
+    //std::cout << "[exp]: " << m_exp(1) << std::endl;
     return 0;
 }
 
