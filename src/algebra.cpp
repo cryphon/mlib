@@ -1,5 +1,6 @@
 #include <mlib/algebra.hpp>
 #include <cmath>
+
 int m_factorial(int n) {
     int f = 1;
     for (int i=1; i<=n; ++i)
@@ -9,15 +10,23 @@ int m_factorial(int n) {
 
 // Exponation by squaring
 double m_power(double base, int exp) {
-    if(exp == 0) return 1;
-    if(exp == 1) return base;
+   if (exp == 0) return 1.0;
 
-    double half = m_power(base, exp /2);
+   bool is_negative = exp < 0;
 
-    if(exp % 2 == 0) {
-        return half * half;
-    }
-    return half * half * base;
+   if(is_negative) exp = -exp;
+
+   double result = 1.0;
+   double power = base;
+
+   while(exp > 0) {
+       if (exp % 2 == 1) {
+           result *= power;
+       }
+       power *= power;
+       exp /=2;
+   }
+   return is_negative ? 1.0 / result : result;
 }
 
 // Newton-Raphson method
@@ -108,4 +117,5 @@ double m_log(double n) {
 double m_log(double n, int e) {
     return custom_log(n, e);
 }
+
 
