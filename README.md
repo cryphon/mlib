@@ -21,3 +21,10 @@ Algebra
     Greatest Common Divisor (GCD)
     Least Common Multiple (LCM)
     Absolute Value
+
+
+
+
+### To build this project, go into a build directory, then run these commands
+`cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON ..`
+`make run`
