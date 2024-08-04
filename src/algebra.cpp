@@ -55,6 +55,11 @@ double custom_log(double n, double base) {
         return 0; // log(1) = 0
     }
 
+    if (base <= 0 || base == 1) {
+        return std::numeric_limits<double>::quiet_NaN(); // NaN for invalid base
+    }
+
+
     // Extract mantissa (m) and exponent (e) such that x = m * 2^e
     int e;
     double m = std::frexp(n, &e);
