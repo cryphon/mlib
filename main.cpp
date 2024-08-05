@@ -34,6 +34,13 @@ int main(void) {
     // base 0
     result = m_log(10.0, 0.0); // invalid base(0)
     std::cout << "Logarithm (base 0): " << result << std::endl;
+
+    result = m_gcd(10, 15);
+    std::cout << "GCD (10, 15): " << result << std::endl;
+
+    result = m_lcm(19, 21);
+    std::cout << "LCM (19, 21): " << result << std::endl;
+
     return 0;
 }
 

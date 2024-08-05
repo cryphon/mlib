@@ -82,8 +82,6 @@ double custom_log(double n, double base) {
     return result;
 }
 
-
-
 double m_abs(double n) {
   if(n < 0) return -n;
     return n; 
@@ -121,6 +119,17 @@ double m_log(double n) {
 
 double m_log(double n, int e) {
     return custom_log(n, e);
+}
+
+// Euclidian algorithm
+int  m_gcd(int a, int b) {
+    if(a == 0)
+        return b;
+    return m_gcd(b % a, a);
+}
+
+int m_lcm(int a, int b) {
+    return (a * b) / m_gcd(a, b);
 }
 
 
