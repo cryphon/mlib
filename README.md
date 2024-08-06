@@ -25,7 +25,7 @@ Algebra
 
 
 
-### To build this project, go into a build directory, then run these commands
+### To build this project, go into build directory, then run these commands
 ```console
 foo@bar:mlib/build$ cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON ..
 foo@bar:mlib/build$ make run
